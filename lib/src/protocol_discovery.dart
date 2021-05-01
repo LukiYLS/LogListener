@@ -21,13 +21,13 @@ class ProtocolDiscovery {
     this.hostPort,
     this.devicePort,
     this.ipv6,
-  }) : assert(logReader != null)
-  {
+  }) : assert(logReader != null) {
     _deviceLogSubscription = logReader.logLines.listen(
-      _handleLine,
+      _handleLineStr,
       onDone: _stopScrapingLogs,
     );
     _uriStreamController = _BufferedStreamController<Uri>();
+    _strStreamController = _BufferedStreamController<String>();
   }
 
   factory ProtocolDiscovery.observatory(
@@ -62,6 +62,7 @@ class ProtocolDiscovery {
 
   StreamSubscription<String> _deviceLogSubscription;
   _BufferedStreamController<Uri> _uriStreamController;
+  _BufferedStreamController<String> _strStreamController;
 
   /// The discovered service URL.
   ///
@@ -92,17 +93,26 @@ class ProtocolDiscovery {
       .asyncMap<Uri>(_forwardPort);
   }
 
+  Stream<String> get strs {
+    return _strStreamController.stream
+        .transform(_throttle<String>(
+          waitDuration: throttleDuration,
+        ));
+  }
+
   Future<void> cancel() => _stopScrapingLogs();
 
   Future<void> _stopScrapingLogs() async {
     await _uriStreamController?.close();
+    await _strStreamController?.close();
     await _deviceLogSubscription?.cancel();
     _deviceLogSubscription = null;
   }
 
   Match _getPatternMatch(String line) {
     final RegExp r = RegExp(RegExp.escape(serviceName) + r' listening on ((http|//)[a-zA-Z0-9:/=_\-\.\[\]]+)');
-    return r.firstMatch(line);
+    final RegExp rx = RegExp('.*Replay recorder listen on.*');
+    return rx.firstMatch(line);
   }
 
   Uri _getObservatoryUri(String line) {
@@ -111,6 +121,31 @@ class ProtocolDiscovery {
       return Uri.parse(match[1]);
     }
     return null;
+  }
+
+  String _getObservatoryStr(String line) {
+    final Match match = _getPatternMatch(line);
+    if (match != null) {
+      return line;
+    }
+    return null;
+  }
+
+  void _handleLineStr(String line) {
+    String uri;
+    try {
+      uri = _getObservatoryStr(line);
+    } on FormatException catch (error, stackTrace) {
+      _uriStreamController.addError(error, stackTrace);
+    }
+    if (uri == null) {
+      return;
+    }
+    // if (devicePort != null && uri.port != devicePort) {
+    //   globals.printTrace('skipping potential observatory $uri due to device port mismatch');
+    //   return;
+    // }
+    _strStreamController.add(uri);
   }
 
   void _handleLine(String line) {

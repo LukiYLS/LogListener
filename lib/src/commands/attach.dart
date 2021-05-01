@@ -55,7 +55,7 @@ import '../widget_cache.dart';
 /// To attach to a flutter mod running on a fuchsia device, `--module` must
 /// also be provided.
 class AttachCommand extends FlutterCommand {
-  AttachCommand({bool verboseHelp = false, this.hotRunnerFactory}) {
+  AttachCommand({bool verboseHelp = false, this.hotRunnerFactory, this.output}) {
     addBuildModeFlags(defaultToRelease: false);
     usesTargetOption();
     usesPortOptions();
@@ -108,8 +108,10 @@ class AttachCommand extends FlutterCommand {
 
   HotRunnerFactory hotRunnerFactory;
 
+  final IOSink output;
+
   @override
-  final String name = 'attach';
+  final String name = 'connect';
 
   @override
   final String description = '''Attach to a running application.
@@ -233,6 +235,7 @@ class AttachCommand extends FlutterCommand {
       : null;
 
     Stream<Uri> observatoryUri;
+    Stream<String> observatoryStr;
     bool usesIpv6 = ipv6;
     final String ipv6Loopback = InternetAddress.loopbackIPv6.address;
     final String ipv4Loopback = InternetAddress.loopbackIPv4.address;
@@ -265,9 +268,10 @@ class AttachCommand extends FlutterCommand {
             usesIpv6: usesIpv6,
             deviceVmservicePort: deviceVmservicePort,
           );
-        observatoryUri = uriFromMdns == null
-          ? null
-          : Stream<Uri>.value(uriFromMdns).asBroadcastStream();
+        observatoryUri = null;
+        // observatoryUri = uriFromMdns == null
+        //   ? null
+        //   : Stream<Uri>.value(uriFromMdns).asBroadcastStream();
       }
       // If MDNS discovery fails or we're not on iOS, fallback to ProtocolDiscovery.
       if (observatoryUri == null) {
@@ -281,8 +285,9 @@ class AttachCommand extends FlutterCommand {
             devicePort: deviceVmservicePort,
             hostPort: hostVmservicePort,
           );
-        globals.printStatus('Waiting for a connection from Flutter on ${device.name}...');
+        // globals.printStatus('Waiting for a connection from Flutter on ${device.name}...');
         observatoryUri = observatoryDiscovery.uris;
+        observatoryStr = observatoryDiscovery.strs;
         // Determine ipv6 status from the scanned logs.
         usesIpv6 = observatoryDiscovery.ipv6;
       }
@@ -330,6 +335,12 @@ class AttachCommand extends FlutterCommand {
         return;
       }
       while (true) {
+        observatoryStr.listen((String replayUri) {
+          //globals.printStatus("Sucess find replay recoder server $replayUri");
+          output.write(replayUri);
+          exit(0);
+          return;
+        });
         final ResidentRunner runner = await createResidentRunner(
           observatoryUris: observatoryUri,
           device: device,
@@ -354,7 +365,8 @@ class AttachCommand extends FlutterCommand {
         if (runner.exited || !runner.isWaitingForObservatory) {
           break;
         }
-        globals.printStatus('Waiting for a new connection from Flutter on ${device.name}...');
+
+        //globals.printStatus('Waiting for a new connection from Flutter on ${device.name}...');
       }
     } finally {
       final List<ForwardedPort> ports = device.portForwarder.forwardedPorts.toList();

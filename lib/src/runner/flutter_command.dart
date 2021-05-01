@@ -153,7 +153,7 @@ abstract class FlutterCommand extends Command<void> {
 
   bool get shouldRunPub => _usesPubOption && boolArg('pub');
 
-  bool get shouldUpdateCache => true;
+  bool get shouldUpdateCache => false; //不需要更新
 
   bool get deprecated => false;
 
@@ -1081,7 +1081,7 @@ abstract class FlutterCommand extends Command<void> {
       }
     }
 
-    if (_usesTargetOption) {
+    if (false) {
       final String targetPath = targetFile;
       if (!globals.fs.isFileSync(targetPath)) {
         throw ToolExit(userMessages.flutterTargetFileMissing(targetPath));

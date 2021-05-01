@@ -1038,7 +1038,7 @@ class AdbLogReader extends DeviceLogReader {
       // If we include logs from the past, filter for 'flutter' logs only.
       if (includePastLogs) ...<String>[
         '-s',
-        'flutter',
+        'ReplayRecorder',
       ] else if (apiVersion != null && apiVersion >= kLollipopVersionCode) ...<String>[
         // Otherwise, filter for logs appearing past the present.
         // '-T 0` means the timestamp of the logcat command invocation.
@@ -1152,7 +1152,7 @@ class AdbLogReader extends DeviceLogReader {
         }
       } else {
         // Filter on approved names and levels.
-        acceptLine = _allowedTags.any((RegExp re) => re.hasMatch(line));
+        acceptLine = true;//_allowedTags.any((RegExp re) => re.hasMatch(line));
       }
 
       if (acceptLine) {

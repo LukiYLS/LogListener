@@ -178,6 +178,7 @@ class FlutterDevice {
   final String userIdentifier;
   final WidgetCache widgetCache;
   Stream<Uri> observatoryUris;
+  Stream<String> observatoryStr;
   vm_service.VmService vmService;
   DevFS devFS;
   ApplicationPackage package;
@@ -212,52 +213,57 @@ class FlutterDevice {
     StreamSubscription<void> subscription;
     bool isWaitingForVm = false;
 
-    subscription = observatoryUris.listen((Uri observatoryUri) async {
-      // FYI, this message is used as a sentinel in tests.
-      globals.printTrace('Connecting to service protocol: $observatoryUri');
-      isWaitingForVm = true;
-      vm_service.VmService service;
-      if (!disableDds) {
-        await device.dds.startDartDevelopmentService(
-          observatoryUri,
-          ipv6,
-        );
-      }
-      try {
-        service = await connectToVmService(
-          observatoryUri,
-          reloadSources: reloadSources,
-          restart: restart,
-          compileExpression: compileExpression,
-          reloadMethod: reloadMethod,
-          getSkSLMethod: getSkSLMethod,
-          printStructuredErrorLogMethod: printStructuredErrorLogMethod,
-          device: device,
-        );
-      } on Exception catch (exception) {
-        globals.printTrace('Fail to connect to service protocol: $observatoryUri: $exception');
-        if (!completer.isCompleted && !_isListeningForObservatoryUri) {
-          completer.completeError('failed to connect to $observatoryUri');
-        }
-        return;
-      }
-      if (completer.isCompleted) {
-        return;
-      }
-      globals.printTrace('Successfully connected to service protocol: $observatoryUri');
 
-      vmService = service;
-      (await device.getLogReader(app: package)).connectedVMService = vmService;
-      completer.complete();
-      await subscription.cancel();
-    }, onError: (dynamic error) {
-      globals.printTrace('Fail to handle observatory URI: $error');
-    }, onDone: () {
-      _isListeningForObservatoryUri = false;
-      if (!completer.isCompleted && !isWaitingForVm) {
-        completer.completeError('connection to device ended too early');
-      }
-    });
+    // var subscriptionStr = observatoryStr.listen((String replayUri) {
+    
+    // });
+
+    // subscription = observatoryUris.listen((Uri observatoryUri) async {
+    //   // FYI, this message is used as a sentinel in tests.
+    //   globals.printTrace('Connecting to service protocol: $observatoryUri');
+    //   isWaitingForVm = true;
+    //   vm_service.VmService service;
+    //   if (!disableDds) {
+    //     await device.dds.startDartDevelopmentService(
+    //       observatoryUri,
+    //       ipv6,
+    //     );
+    //   }
+    //   try {
+    //     service = await connectToVmService(
+    //       observatoryUri,
+    //       reloadSources: reloadSources,
+    //       restart: restart,
+    //       compileExpression: compileExpression,
+    //       reloadMethod: reloadMethod,
+    //       getSkSLMethod: getSkSLMethod,
+    //       printStructuredErrorLogMethod: printStructuredErrorLogMethod,
+    //       device: device,
+    //     );
+    //   } on Exception catch (exception) {
+    //     globals.printTrace('Fail to connect to service protocol: $observatoryUri: $exception');
+    //     if (!completer.isCompleted && !_isListeningForObservatoryUri) {
+    //       completer.completeError('failed to connect to $observatoryUri');
+    //     }
+    //     return;
+    //   }
+    //   if (completer.isCompleted) {
+    //     return;
+    //   }
+    //   globals.printTrace('Successfully connected to service protocol: $observatoryUri');
+
+    //   vmService = service;
+    //   (await device.getLogReader(app: package)).connectedVMService = vmService;
+    //   completer.complete();
+    //   await subscription.cancel();
+    // }, onError: (dynamic error) {
+    //   globals.printTrace('Fail to handle observatory URI: $error');
+    // }, onDone: () {
+    //   _isListeningForObservatoryUri = false;
+    //   if (!completer.isCompleted && !isWaitingForVm) {
+    //     completer.completeError('connection to device ended too early');
+    //   }
+    // });
     _isListeningForObservatoryUri = true;
     return completer.future;
   }
