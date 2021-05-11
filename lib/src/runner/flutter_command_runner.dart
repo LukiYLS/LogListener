@@ -32,16 +32,16 @@ const String kFlutterEnginePackageName = 'sky_engine';
 
 class FlutterCommandRunner extends CommandRunner<void> {
   FlutterCommandRunner({ bool verboseHelp = false }) : super(
-    'flutter',
-    'Manage your Flutter app development.\n'
-      '\n'
-      'Common commands:\n'
-      '\n'
-      '  flutter create <output directory>\n'
-      '    Create a new Flutter project in the specified directory.\n'
-      '\n'
-      '  flutter run [options]\n'
-      '    Run your Flutter application on an attached device or in an emulator.',
+    'LogListener',
+    'Listen device log.\n'
+      // '\n'
+      // 'Common commands:\n'
+      // '\n'
+      // '  flutter create <output directory>\n'
+      // '    Create a new Flutter project in the specified directory.\n'
+      // '\n'
+      // '  flutter run [options]\n'
+      // '    Run your Flutter application on an attached device or in an emulator.',
   ) {
     argParser.addFlag('verbose',
         abbr: 'v',
@@ -143,10 +143,7 @@ class FlutterCommandRunner extends CommandRunner<void> {
 
   @override
   String get usageFooter {
-    return wrapText('Run "flutter help -v" for verbose help output, including less commonly used options.',
-      columnWidth: globals.outputPreferences.wrapColumn,
-      shouldWrap: globals.outputPreferences.wrapText,
-    );
+    return '';
   }
 
   @override
@@ -302,7 +299,7 @@ class FlutterCommandRunner extends CommandRunner<void> {
         }
         final bool machineFlag = topLevelResults['machine'] as bool;
         if (topLevelResults.command?.name != 'upgrade' && topLevelResults['version-check'] as bool && !machineFlag) {
-          await globals.flutterVersion.checkFlutterVersionFreshness();
+          // await globals.flutterVersion.checkFlutterVersionFreshness();
         }
 
         if (topLevelResults.wasParsed('packages')) {

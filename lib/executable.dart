@@ -9,7 +9,7 @@ import 'dart:io';
 import 'runner.dart' as runner;
 
 import 'src/commands/attach.dart';
-
+import 'src/commands/devices.dart';
 import 'src/runner/flutter_command.dart';
 
 
@@ -17,8 +17,9 @@ import 'src/runner/flutter_command.dart';
 ///
 /// This function is intended to be used from the `flutter` command line tool.
 Future<void> main(List<String> args) async {
-  // args = ['attachReplay', '--device-id=FA3104B7-2E32-474C-A50D-558BE3936E46'];
-  // args = ['attachReplay', '--device-id=d887f483'];
+  // args = ['listen', '--device-id=00008030-0012041E1A31802E'];
+  // args = ['listen', '--device-id=d887f483', '--regex=.*Replay recorder listen on.*'];
+  // args = ['devices'];
   final bool veryVerbose = args.contains('-vv');
   final bool verbose = args.contains('-v') || args.contains('--verbose') || veryVerbose;
 
@@ -34,6 +35,7 @@ Future<void> main(List<String> args) async {
   
   await runner.run(args, () => <FlutterCommand>[
     AttachCommand(verboseHelp: verboseHelp, output: stdout),
+    DevicesCommand()
   ], verbose: verbose,
      muteCommandLogging: muteCommandLogging,
      verboseHelp: verboseHelp);

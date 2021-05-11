@@ -99,6 +99,9 @@ class AttachCommand extends FlutterCommand {
         negatable: false,
         help: 'Handle machine structured JSON command input and provide output '
               'and progress in machine friendly format.',
+      )..addOption(
+        'regex',
+        help: 'Listen regluar expression'
       );
     usesTrackWidgetCreation(verboseHelp: verboseHelp);
     addDdsOptions(verboseHelp: verboseHelp);
@@ -111,10 +114,10 @@ class AttachCommand extends FlutterCommand {
   final IOSink output;
 
   @override
-  final String name = 'connect';
+  final String name = 'listen';
 
   @override
-  final String description = '''Attach to a running application.
+  final String description = '''Listen device log application.
 
   For attaching to Android or iOS devices, simply using `flutter attach` is
   usually sufficient. The tool will search for a running Flutter app or module,
@@ -150,6 +153,10 @@ class AttachCommand extends FlutterCommand {
       throwToolExit('Port not specified for `--debug-uri`: $uri');
     }
     return uri;
+  }
+
+  String get customRegExp {
+    return stringArg('regex');
   }
 
   String get appId {
@@ -284,6 +291,7 @@ class AttachCommand extends FlutterCommand {
             ipv6: ipv6,
             devicePort: deviceVmservicePort,
             hostPort: hostVmservicePort,
+            customRegExp: customRegExp
           );
         // globals.printStatus('Waiting for a connection from Flutter on ${device.name}...');
         observatoryUri = observatoryDiscovery.uris;

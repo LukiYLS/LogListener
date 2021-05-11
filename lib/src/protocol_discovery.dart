@@ -21,6 +21,7 @@ class ProtocolDiscovery {
     this.hostPort,
     this.devicePort,
     this.ipv6,
+    this.customRegExp
   }) : assert(logReader != null) {
     _deviceLogSubscription = logReader.logLines.listen(
       _handleLineStr,
@@ -37,6 +38,7 @@ class ProtocolDiscovery {
     @required int hostPort,
     @required int devicePort,
     @required bool ipv6,
+    String customRegExp
   }) {
     const String kObservatoryService = 'Observatory';
     return ProtocolDiscovery._(
@@ -47,6 +49,7 @@ class ProtocolDiscovery {
       hostPort: hostPort,
       devicePort: devicePort,
       ipv6: ipv6,
+      customRegExp: customRegExp
     );
   }
 
@@ -56,6 +59,7 @@ class ProtocolDiscovery {
   final int hostPort;
   final int devicePort;
   final bool ipv6;
+  final String customRegExp;
 
   /// The time to wait before forwarding a new observatory URIs from [logReader].
   final Duration throttleDuration;
@@ -110,8 +114,8 @@ class ProtocolDiscovery {
   }
 
   Match _getPatternMatch(String line) {
-    final RegExp r = RegExp(RegExp.escape(serviceName) + r' listening on ((http|//)[a-zA-Z0-9:/=_\-\.\[\]]+)');
-    final RegExp rx = RegExp('.*Replay recorder listen on.*');
+    // final RegExp r = RegExp(RegExp.escape(serviceName) + r' listening on ((http|//)[a-zA-Z0-9:/=_\-\.\[\]]+)');
+    final RegExp rx = RegExp(customRegExp);
     return rx.firstMatch(line);
   }
 
