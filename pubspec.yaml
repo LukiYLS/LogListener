@@ -1,6 +1,7 @@
 name: ReplayServerTools
 description: Tools for Replay Recoder Server
-
+executables:
+  ReplayServerTools:
 environment:
   # The pub client defaults to an <2.0.0 sdk constraint which we need to explicitly overwrite.
   sdk: ">=2.7.0 <3.0.0"
