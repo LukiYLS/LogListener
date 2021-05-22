@@ -244,7 +244,7 @@ class DriveCommand extends RunCommandBase {
       // TODO(bkonyi): add web support (https://github.com/flutter/flutter/issues/61259)
       if (!isWebPlatform) {
         try {
-          // If there's another flutter_tools instance still connected to the target
+          // If there's another ReplayServerTools instance still connected to the target
           // application, DDS will already be running remotely and this call will fail.
           // We can ignore this and continue to use the remote DDS instance.
           await device.dds.startDartDevelopmentService(Uri.parse(observatoryUri), ipv6);

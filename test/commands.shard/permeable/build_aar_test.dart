@@ -5,15 +5,15 @@
 import 'dart:io' show Process, ProcessResult;
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/android/android_builder.dart';
-import 'package:flutter_tools/src/android/android_sdk.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/build_aar.dart';
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/android/android_builder.dart';
+import 'package:ReplayServerTools/src/android/android_sdk.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/build_aar.dart';
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 
@@ -43,7 +43,7 @@ void main() {
 
     setUp(() {
       mockUsage = MockUsage();
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_packages_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_packages_test.');
     });
 
     tearDown(() {
@@ -114,7 +114,7 @@ void main() {
 
     setUp(() {
       mockAndroidBuilder = MockAndroidBuilder();
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_build_aar_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_build_aar_test.');
     });
 
     tearDown(() {
@@ -211,7 +211,7 @@ void main() {
       mockUsage = MockUsage();
       when(mockUsage.isFirstRun).thenReturn(true);
 
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_packages_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_packages_test.');
 
       mockProcessManager = MockProcessManager();
       when(mockProcessManager.run(any,

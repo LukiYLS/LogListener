@@ -34,7 +34,7 @@ abstract class UnpackMacOS extends Target {
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/macos.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/macos.dart'),
   ];
 
   @override
@@ -171,7 +171,7 @@ static const int Moo = 88;
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/macos.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/macos.dart'),
   ];
 
   @override
@@ -245,7 +245,7 @@ class CompileMacOSFramework extends Target {
   @override
   List<Source> get inputs => const <Source>[
     Source.pattern('{BUILD_DIR}/app.dill'),
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/macos.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/macos.dart'),
     Source.artifact(Artifact.genSnapshot, mode: BuildMode.release, platform: TargetPlatform.darwin_x64),
   ];
 

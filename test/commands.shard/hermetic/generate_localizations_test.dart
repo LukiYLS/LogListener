@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/runner/flutter_command.dart';
-import 'package:flutter_tools/src/commands/generate_localizations.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/runner/flutter_command.dart';
+import 'package:ReplayServerTools/src/commands/generate_localizations.dart';
 
 import '../../src/common.dart';
 import '../../src/context.dart';

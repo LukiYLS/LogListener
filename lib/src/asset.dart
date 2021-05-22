@@ -380,7 +380,7 @@ class _Asset {
 
 Map<String, dynamic> _readMaterialFontsManifest() {
   final String fontsPath = globals.fs.path.join(globals.fs.path.absolute(Cache.flutterRoot),
-      'packages', 'flutter_tools', 'schema', 'material_fonts.yaml');
+      'packages', 'ReplayServerTools', 'schema', 'material_fonts.yaml');
 
   return castStringKeyedMap(loadYaml(globals.fs.file(fontsPath).readAsStringSync()));
 }

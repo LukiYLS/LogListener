@@ -6,8 +6,8 @@ import 'dart:async';
 
 import 'package:file/file.dart';
 import 'package:file/local.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
 import 'package:process/process.dart';
 
 import '../src/common.dart';

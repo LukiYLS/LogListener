@@ -126,7 +126,7 @@ class AotAssemblyRelease extends AotAssemblyBase {
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/ios.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/ios.dart'),
     Source.pattern('{BUILD_DIR}/app.dill'),
     Source.pattern('{PROJECT_DIR}/.packages'),
     Source.artifact(Artifact.engineDartBinary),
@@ -161,7 +161,7 @@ class AotAssemblyProfile extends AotAssemblyBase {
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/ios.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/ios.dart'),
     Source.pattern('{BUILD_DIR}/app.dill'),
     Source.pattern('{PROJECT_DIR}/.packages'),
     Source.artifact(Artifact.engineDartBinary),
@@ -200,7 +200,7 @@ class DebugUniveralFramework extends Target {
 
   @override
   List<Source> get inputs => const <Source>[
-     Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/ios.dart'),
+     Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/ios.dart'),
   ];
 
   @override
@@ -420,7 +420,7 @@ Future<RunResult> createStubAppFramework(File outputFile, SdkType sdk, { bool in
   }
 
   final Directory tempDir = outputFile.fileSystem.systemTempDirectory
-    .createTempSync('flutter_tools_stub_source.');
+    .createTempSync('ReplayServerTools_stub_source.');
   try {
     final File stubSource = tempDir.childFile('debug_app.cc')
       ..writeAsStringSync(r'''

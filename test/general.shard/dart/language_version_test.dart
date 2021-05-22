@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/dart/language_version.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/dart/language_version.dart';
 import 'package:package_config/package_config.dart';
 
 import '../../src/common.dart';

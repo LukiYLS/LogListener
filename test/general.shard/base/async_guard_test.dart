@@ -4,8 +4,8 @@
 
 import 'dart:async';
 
-import 'package:flutter_tools/src/base/async_guard.dart';
-import 'package:flutter_tools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/async_guard.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
 import 'package:fake_async/fake_async.dart';
 
 import '../../src/common.dart';

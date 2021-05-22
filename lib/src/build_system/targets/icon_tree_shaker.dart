@@ -80,7 +80,7 @@ class IconTreeShaker {
   ///
   /// See [Target.inputs].
   static const List<Source> inputs = <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/icon_tree_shaker.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/icon_tree_shaker.dart'),
     Source.artifact(Artifact.constFinder),
     Source.artifact(Artifact.fontSubset),
   ];

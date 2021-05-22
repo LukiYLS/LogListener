@@ -5,7 +5,7 @@
 part of reporting;
 
 /// Tells crash backend that the error is from the Flutter CLI.
-const String _kProductId = 'Flutter_Tools';
+const String _kProductId = 'ReplayServerTools';
 
 /// Tells crash backend that this is a Dart error as opposed to, say, Java.
 const String _kDartTypeId = 'DartError';

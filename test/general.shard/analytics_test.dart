@@ -4,21 +4,21 @@
 
 import 'package:args/command_runner.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/config.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/base/time.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/build.dart';
-import 'package:flutter_tools/src/commands/config.dart';
-import 'package:flutter_tools/src/commands/doctor.dart';
-import 'package:flutter_tools/src/doctor.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/reporting/reporting.dart';
-import 'package:flutter_tools/src/runner/flutter_command.dart';
-import 'package:flutter_tools/src/version.dart';
+import 'package:ReplayServerTools/src/base/config.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/time.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/build.dart';
+import 'package:ReplayServerTools/src/commands/config.dart';
+import 'package:ReplayServerTools/src/commands/doctor.dart';
+import 'package:ReplayServerTools/src/doctor.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/runner/flutter_command.dart';
+import 'package:ReplayServerTools/src/version.dart';
 import 'package:mockito/mockito.dart';
 import 'package:usage/usage_io.dart';
 
@@ -37,7 +37,7 @@ void main() {
 
     setUp(() {
       Cache.flutterRoot = '../..';
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_analytics_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_analytics_test.');
       mockFlutterConfig = MockFlutterConfig();
     });
 
@@ -302,7 +302,7 @@ void main() {
 
     setUp(() {
       tempDir = globals.fs.systemTempDirectory.createTempSync(
-        'flutter_tools_analytics_bots_test.',
+        'ReplayServerTools_analytics_bots_test.',
       );
     });
 

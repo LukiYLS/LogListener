@@ -7,8 +7,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
 import 'package:process/process.dart';
 
 import '../src/common.dart';

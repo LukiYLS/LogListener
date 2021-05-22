@@ -7,10 +7,10 @@ import 'dart:convert';
 import 'dart:io' as io; // ignore: dart_io_import
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/utils.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/utils.dart';
 import 'package:meta/meta.dart';
 import 'package:process/process.dart';
 import 'package:vm_service/vm_service.dart';

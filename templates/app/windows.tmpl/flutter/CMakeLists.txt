@@ -89,7 +89,7 @@ add_custom_command(
     ${PHONY_OUTPUT}
   COMMAND ${CMAKE_COMMAND} -E env
     ${FLUTTER_TOOL_ENVIRONMENT}
-    "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.bat"
+    "${FLUTTER_ROOT}/packages/ReplayServerTools/bin/tool_backend.bat"
       windows-x64 $<CONFIG>
 )
 add_custom_target(flutter_assemble DEPENDS

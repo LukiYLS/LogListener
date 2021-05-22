@@ -261,7 +261,7 @@ class _DefaultUsage implements Usage {
       enabledFeatures,
     );
 
-    // Record the host as the application installer ID - the context that flutter_tools is running in.
+    // Record the host as the application installer ID - the context that ReplayServerTools is running in.
     if (globals.platform.environment.containsKey('FLUTTER_HOST')) {
       _analytics.setSessionValue('aiid', globals.platform.environment['FLUTTER_HOST']);
     }
@@ -371,7 +371,7 @@ class _DefaultUsage implements Usage {
   Future<void> ensureAnalyticsSent() async {
     // TODO(devoncarew): This may delay tool exit and could cause some analytics
     // events to not be reported. Perhaps we could send the analytics pings
-    // out-of-process from flutter_tools?
+    // out-of-process from ReplayServerTools?
     await _analytics.waitForLastPing(timeout: const Duration(milliseconds: 250));
   }
 

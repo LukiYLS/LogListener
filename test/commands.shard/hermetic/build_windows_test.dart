@@ -4,14 +4,14 @@
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/build_windows.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
-import 'package:flutter_tools/src/windows/visual_studio.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/build_windows.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/windows/visual_studio.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 
@@ -74,7 +74,7 @@ void main() {
     final File sourceTemplateVersionfile = fileSystem.file(fileSystem.path.join(
       fileSystem.path.absolute(Cache.flutterRoot),
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       'templates',
       'app',
       'windows.tmpl',

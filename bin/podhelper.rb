@@ -68,7 +68,7 @@ def flutter_install_ios_engine_pod(ios_application_path = nil)
     # which can handle a local engine.
     # CocoaPods will not embed the framework on pod install (before any build phases can generate) if the dylib does not exist.
 
-    # This podhelper script is at $FLUTTER_ROOT/packages/flutter_tools/bin.
+    # This podhelper script is at $FLUTTER_ROOT/packages/ReplayServerTools/bin.
     # Copy frameworks from $FLUTTER_ROOT/bin/cache/artifacts/engine/ios (Debug).
     debug_framework_dir = File.expand_path(File.join('..', '..', '..', '..', 'bin', 'cache', 'artifacts', 'engine', 'ios'), __FILE__)
 

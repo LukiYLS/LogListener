@@ -6,16 +6,16 @@ import 'dart:async';
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/ios/xcodeproj.dart';
-import 'package:flutter_tools/src/macos/cocoapods.dart';
-import 'package:flutter_tools/src/plugins.dart';
-import 'package:flutter_tools/src/project.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/ios/xcodeproj.dart';
+import 'package:ReplayServerTools/src/macos/cocoapods.dart';
+import 'package:ReplayServerTools/src/plugins.dart';
+import 'package:ReplayServerTools/src/project.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 
@@ -77,17 +77,17 @@ void main() {
     );
     pretendPodVersionIs('1.8.0');
     fileSystem.file(fileSystem.path.join(
-      Cache.flutterRoot, 'packages', 'flutter_tools', 'templates', 'cocoapods', 'Podfile-ios-objc',
+      Cache.flutterRoot, 'packages', 'ReplayServerTools', 'templates', 'cocoapods', 'Podfile-ios-objc',
     ))
         ..createSync(recursive: true)
         ..writeAsStringSync('Objective-C iOS podfile template');
     fileSystem.file(fileSystem.path.join(
-      Cache.flutterRoot, 'packages', 'flutter_tools', 'templates', 'cocoapods', 'Podfile-ios-swift',
+      Cache.flutterRoot, 'packages', 'ReplayServerTools', 'templates', 'cocoapods', 'Podfile-ios-swift',
     ))
         ..createSync(recursive: true)
         ..writeAsStringSync('Swift iOS podfile template');
     fileSystem.file(fileSystem.path.join(
-      Cache.flutterRoot, 'packages', 'flutter_tools', 'templates', 'cocoapods', 'Podfile-macos',
+      Cache.flutterRoot, 'packages', 'ReplayServerTools', 'templates', 'cocoapods', 'Podfile-macos',
     ))
         ..createSync(recursive: true)
         ..writeAsStringSync('macOS podfile template');

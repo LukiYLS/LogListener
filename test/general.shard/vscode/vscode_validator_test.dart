@@ -3,9 +3,9 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/vscode/vscode.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/vscode/vscode.dart';
 
 import '../../src/common.dart';
 

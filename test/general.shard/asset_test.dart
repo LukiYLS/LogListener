@@ -4,9 +4,9 @@
 
 import 'dart:async';
 
-import 'package:flutter_tools/src/asset.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/asset.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../src/common.dart';
 import '../src/context.dart';
@@ -16,7 +16,7 @@ void main() {
     final String dataPath = globals.fs.path.join(
       getFlutterRoot(),
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       'test',
       'data',
       'asset_test',
@@ -48,7 +48,7 @@ void main() {
       final String dataPath = globals.fs.path.join(
         getFlutterRoot(),
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'test',
         'data',
         'fuchsia_test',

@@ -6,20 +6,20 @@ import 'dart:async';
 
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/convert.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/convert.dart';
 import 'package:vm_service/vm_service.dart' as vm_service;
 import 'package:path/path.dart' as path; // ignore: package_path_import
 
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/context.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/commands/create.dart';
-import 'package:flutter_tools/src/runner/flutter_command.dart';
-import 'package:flutter_tools/src/runner/flutter_command_runner.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/context.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/commands/create.dart';
+import 'package:ReplayServerTools/src/runner/flutter_command.dart';
+import 'package:ReplayServerTools/src/runner/flutter_command_runner.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:meta/meta.dart';
 import 'package:fake_async/fake_async.dart';
 import 'package:test_api/test_api.dart' as test_package show TypeMatcher, test; // ignore: deprecated_member_use
@@ -55,7 +55,7 @@ String getFlutterRoot() {
     return platform.environment['FLUTTER_ROOT'];
   }
 
-  Error invalidScript() => StateError('Could not determine flutter_tools/ path from script URL (${globals.platform.script}); consider setting FLUTTER_ROOT explicitly.');
+  Error invalidScript() => StateError('Could not determine ReplayServerTools/ path from script URL (${globals.platform.script}); consider setting FLUTTER_ROOT explicitly.');
 
   Uri scriptUri;
   switch (globals.platform.script.scheme) {
@@ -63,7 +63,7 @@ String getFlutterRoot() {
       scriptUri = globals.platform.script;
       break;
     case 'data':
-      final RegExp flutterTools = RegExp(r'(file://[^"]*[/\\]flutter_tools[/\\][^"]+\.dart)', multiLine: true);
+      final RegExp flutterTools = RegExp(r'(file://[^"]*[/\\]ReplayServerTools[/\\][^"]+\.dart)', multiLine: true);
       final Match match = flutterTools.firstMatch(Uri.decodeFull(globals.platform.script.path));
       if (match == null) {
         throw invalidScript();
@@ -75,7 +75,7 @@ String getFlutterRoot() {
   }
 
   final List<String> parts = path.split(globals.fs.path.fromUri(scriptUri));
-  final int toolsIndex = parts.indexOf('flutter_tools');
+  final int toolsIndex = parts.indexOf('ReplayServerTools');
   if (toolsIndex == -1) {
     throw invalidScript();
   }

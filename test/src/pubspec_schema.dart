@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/flutter_manifest.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/flutter_manifest.dart';
 import 'package:meta/meta.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:yaml/yaml.dart';
 import 'common.dart';
 

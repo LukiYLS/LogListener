@@ -449,7 +449,7 @@ class _ResidentWebRunner extends ResidentWebRunner {
         // This will result in a NoSuchMethodError thrown by injected_handler.darts
         await pub.get(
           context: PubContext.pubGet,
-          directory: globals.fs.path.join(Cache.flutterRoot, 'packages', 'flutter_tools'),
+          directory: globals.fs.path.join(Cache.flutterRoot, 'packages', 'ReplayServerTools'),
           generateSyntheticPackage: false,
         );
 
@@ -610,7 +610,7 @@ class _ResidentWebRunner extends ResidentWebRunner {
   Future<Uri> _generateEntrypoint(Uri mainUri, PackageConfig packageConfig) async {
     File result = _generatedEntrypointDirectory?.childFile('web_entrypoint.dart');
     if (_generatedEntrypointDirectory == null) {
-      _generatedEntrypointDirectory ??= globals.fs.systemTempDirectory.createTempSync('flutter_tools.')
+      _generatedEntrypointDirectory ??= globals.fs.systemTempDirectory.createTempSync('ReplayServerTools.')
         ..createSync();
       result = _generatedEntrypointDirectory.childFile('web_entrypoint.dart');
 

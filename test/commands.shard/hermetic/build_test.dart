@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/runner/flutter_command.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/runner/flutter_command.dart';
 
 import '../../src/common.dart';
 import '../../src/context.dart';

@@ -4,16 +4,16 @@
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/build_system/depfile.dart';
-import 'package:flutter_tools/src/build_system/targets/assets.dart';
-import 'package:flutter_tools/src/convert.dart';
-import 'package:flutter_tools/src/devfs.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/build_system/depfile.dart';
+import 'package:ReplayServerTools/src/build_system/targets/assets.dart';
+import 'package:ReplayServerTools/src/convert.dart';
+import 'package:ReplayServerTools/src/devfs.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../src/common.dart';
@@ -35,7 +35,7 @@ void main() {
       logger: BufferLogger.test(),
     );
     fileSystem.file(environment.buildDir.childFile('app.dill')).createSync(recursive: true);
-    fileSystem.file('packages/flutter_tools/lib/src/build_system/targets/assets.dart')
+    fileSystem.file('packages/ReplayServerTools/lib/src/build_system/targets/assets.dart')
       .createSync(recursive: true);
     fileSystem.file('assets/foo/bar.png')
       .createSync(recursive: true);

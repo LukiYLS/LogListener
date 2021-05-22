@@ -218,15 +218,15 @@ class LocalFileSystem extends local_fs.LocalFileSystem {
   }
 
   // This getter returns a fresh entry under /tmp, like
-  // /tmp/flutter_tools.abcxyz, then the rest of the tool creates /tmp entries
-  // under that, like /tmp/flutter_tools.abcxyz/flutter_build_stuff.123456.
+  // /tmp/ReplayServerTools.abcxyz, then the rest of the tool creates /tmp entries
+  // under that, like /tmp/ReplayServerTools.abcxyz/flutter_build_stuff.123456.
   // Right before exiting because of a signal or otherwise, we delete
-  // /tmp/flutter_tools.abcxyz, not the whole of /tmp.
+  // /tmp/ReplayServerTools.abcxyz, not the whole of /tmp.
   @override
   Directory get systemTempDirectory {
     if (_systemTemp == null) {
       _systemTemp = super.systemTempDirectory.createTempSync(
-        'flutter_tools.',
+        'ReplayServerTools.',
       )..createSync(recursive: true);
       // Make sure that the temporary directory is cleaned up if the tool is
       // killed by a signal.

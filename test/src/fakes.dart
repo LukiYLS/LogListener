@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:flutter_tools/src/device.dart';
+import 'package:ReplayServerTools/src/device.dart';
 
 /// A fake implementation of the [DeviceLogReader].
 class FakeDeviceLogReader extends DeviceLogReader {

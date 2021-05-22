@@ -5,15 +5,15 @@
 import 'dart:convert';
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/android/android_sdk.dart';
-import 'package:flutter_tools/src/android/android_studio.dart';
-import 'package:flutter_tools/src/base/context.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/config.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/reporting/reporting.dart';
-import 'package:flutter_tools/src/version.dart';
+import 'package:ReplayServerTools/src/android/android_sdk.dart';
+import 'package:ReplayServerTools/src/android/android_studio.dart';
+import 'package:ReplayServerTools/src/base/context.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/config.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/version.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

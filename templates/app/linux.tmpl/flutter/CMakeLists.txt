@@ -79,7 +79,7 @@ add_custom_command(
     ${CMAKE_CURRENT_BINARY_DIR}/_phony_
   COMMAND ${CMAKE_COMMAND} -E env
     ${FLUTTER_TOOL_ENVIRONMENT}
-    "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.sh"
+    "${FLUTTER_ROOT}/packages/ReplayServerTools/bin/tool_backend.sh"
       linux-x64 ${CMAKE_BUILD_TYPE}
 )
 add_custom_target(flutter_assemble DEPENDS

@@ -4,12 +4,12 @@
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/template.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/dart/pub.dart';
-import 'package:flutter_tools/src/template.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/template.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/dart/pub.dart';
+import 'package:ReplayServerTools/src/template.dart';
 import 'package:mockito/mockito.dart';
 import 'src/common.dart';
 
@@ -118,7 +118,7 @@ void main() {
     Cache.flutterRoot = '/flutter';
     final File packagesFile = fileSystem.directory(Cache.flutterRoot)
       .childDirectory('packages')
-      .childDirectory('flutter_tools')
+      .childDirectory('ReplayServerTools')
       .childFile('.packages');
     packagesFile.createSync(recursive: true);
 
@@ -142,7 +142,7 @@ void main() {
     Cache.flutterRoot = '/flutter';
     final File packagesFile = fileSystem.directory(Cache.flutterRoot)
       .childDirectory('packages')
-      .childDirectory('flutter_tools')
+      .childDirectory('ReplayServerTools')
       .childFile('.packages');
     packagesFile.createSync(recursive: true);
     packagesFile.writeAsStringSync('\n');

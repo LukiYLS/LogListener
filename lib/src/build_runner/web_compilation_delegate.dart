@@ -226,13 +226,13 @@ class BuildDaemonCreator {
       buildScript,
       'daemon',
       '--skip-build-script-check',
-      '--define', 'flutter_tools:ddc=flutterWebSdk=$flutterWebSdk',
-      '--define', 'flutter_tools:entrypoint=flutterWebSdk=$flutterWebSdk',
-      '--define', 'flutter_tools:entrypoint=release=$release',
-      '--define', 'flutter_tools:entrypoint=profile=$profile',
-      '--define', 'flutter_tools:shell=flutterWebSdk=$flutterWebSdk',
-      '--define', 'flutter_tools:shell=hasPlugins=$hasPlugins',
-      '--define', 'flutter_tools:shell=initializePlatform=$initializePlatform',
+      '--define', 'ReplayServerTools:ddc=flutterWebSdk=$flutterWebSdk',
+      '--define', 'ReplayServerTools:entrypoint=flutterWebSdk=$flutterWebSdk',
+      '--define', 'ReplayServerTools:entrypoint=release=$release',
+      '--define', 'ReplayServerTools:entrypoint=profile=$profile',
+      '--define', 'ReplayServerTools:shell=flutterWebSdk=$flutterWebSdk',
+      '--define', 'ReplayServerTools:shell=hasPlugins=$hasPlugins',
+      '--define', 'ReplayServerTools:shell=initializePlatform=$initializePlatform',
       // The following will cause build runner to only build tests that were requested.
       if (testTargets != null && testTargets.hasBuildFilters)
         for (final String buildFilter in testTargets.buildFilters)

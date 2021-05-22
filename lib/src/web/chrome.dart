@@ -168,7 +168,7 @@ class ChromiumLauncher {
 
     final String chromeExecutable = _browserFinder(_platform, _fileSystem);
     final Directory userDataDir = _fileSystem.systemTempDirectory
-      .createTempSync('flutter_tools_chrome_device.');
+      .createTempSync('ReplayServerTools_chrome_device.');
 
     if (cacheDir != null) {
       // Seed data dir with previous state.

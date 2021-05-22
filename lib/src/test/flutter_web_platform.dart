@@ -55,7 +55,7 @@ class FlutterWebPlatform extends PlatformPlugin {
         .add(packagesDirHandler())
         .add(_jsHandler.handler)
         .add(createStaticHandler(
-          globals.fs.path.join(Cache.flutterRoot, 'packages', 'flutter_tools'),
+          globals.fs.path.join(Cache.flutterRoot, 'packages', 'ReplayServerTools'),
           serveFilesOutsidePath: true,
         ))
         .add(createStaticHandler(
@@ -105,7 +105,7 @@ class FlutterWebPlatform extends PlatformPlugin {
     globals.fs.file(globals.fs.path.join(
       Cache.flutterRoot,
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       '.packages',
     )),
     logger: globals.logger,
@@ -133,7 +133,7 @@ class FlutterWebPlatform extends PlatformPlugin {
   File get ahem => globals.fs.file(globals.fs.path.join(
         Cache.flutterRoot,
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'static',
         'Ahem.ttf',
       ));

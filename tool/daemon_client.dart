@@ -6,7 +6,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_tools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
 
 Process daemon;
 
@@ -20,7 +20,7 @@ Process daemon;
 //   launch: launch an emulator
 
 Future<void> main() async {
-  daemon = await Process.start('dart', <String>['bin/flutter_tools.dart', 'daemon']);
+  daemon = await Process.start('dart', <String>['bin/ReplayServerTools.dart', 'daemon']);
   print('daemon process started, pid: ${daemon.pid}');
 
   daemon.stdout

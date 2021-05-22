@@ -7,13 +7,13 @@ import 'dart:convert';
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/os.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/doctor.dart';
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/os.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/doctor.dart';
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
 import 'package:mockito/mockito.dart';
@@ -58,12 +58,12 @@ void main() {
       port: 443,
       path: '/cr/report',
       queryParameters: <String, String>{
-        'product': 'Flutter_Tools',
+        'product': 'ReplayServerTools',
         'version': 'test-version',
       },
     ));
     expect(crashInfo.fields['uuid'], '00000000-0000-4000-0000-000000000000');
-    expect(crashInfo.fields['product'], 'Flutter_Tools');
+    expect(crashInfo.fields['product'], 'ReplayServerTools');
     expect(crashInfo.fields['version'], 'test-version');
     expect(crashInfo.fields['osName'], 'linux');
     expect(crashInfo.fields['osVersion'], 'Linux');
@@ -302,7 +302,7 @@ void main() {
         port: 12345,
         path: '/fake_server',
         queryParameters: <String, String>{
-          'product': 'Flutter_Tools',
+          'product': 'ReplayServerTools',
           'version': 'test-version',
         },
       ));

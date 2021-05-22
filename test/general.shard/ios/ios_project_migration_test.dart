@@ -4,16 +4,16 @@
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/base/terminal.dart';
-import 'package:flutter_tools/src/ios/migrations/ios_migrator.dart';
-import 'package:flutter_tools/src/ios/migrations/project_base_configuration_migration.dart';
-import 'package:flutter_tools/src/ios/migrations/remove_framework_link_and_embedding_migration.dart';
-import 'package:flutter_tools/src/ios/migrations/xcode_build_system_migration.dart';
-import 'package:flutter_tools/src/macos/xcode.dart';
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/terminal.dart';
+import 'package:ReplayServerTools/src/ios/migrations/ios_migrator.dart';
+import 'package:ReplayServerTools/src/ios/migrations/project_base_configuration_migration.dart';
+import 'package:ReplayServerTools/src/ios/migrations/remove_framework_link_and_embedding_migration.dart';
+import 'package:ReplayServerTools/src/ios/migrations/xcode_build_system_migration.dart';
+import 'package:ReplayServerTools/src/macos/xcode.dart';
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:meta/meta.dart';
 import 'package:mockito/mockito.dart';
 
@@ -100,7 +100,7 @@ void main () {
 
       testWithoutContext('skips migrating script with embed', () {
         const String contents = '''
-shellScript = "/bin/sh \"\$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\\" embed\\n/bin/sh \"\$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\\" thin";
+shellScript = "/bin/sh \"\$FLUTTER_ROOT/packages/ReplayServerTools/bin/xcode_backend.sh\\" embed\\n/bin/sh \"\$FLUTTER_ROOT/packages/ReplayServerTools/bin/xcode_backend.sh\\" thin";
 			''';
         xcodeProjectInfoFile.writeAsStringSync(contents);
 
@@ -128,7 +128,7 @@ keep this 1
 741F496221355F47001E2961
 9740EEBA1CF902C7004384FC
 741F495E21355F27001E2961
-			shellScript = "/bin/sh \"\$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\\" thin";
+			shellScript = "/bin/sh \"\$FLUTTER_ROOT/packages/ReplayServerTools/bin/xcode_backend.sh\\" thin";
 keep this 2
 ''');
 
@@ -143,7 +143,7 @@ keep this 2
 
         expect(xcodeProjectInfoFile.readAsStringSync(), '''
 keep this 1
-			shellScript = "/bin/sh "\$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\\" embed_and_thin";
+			shellScript = "/bin/sh "\$FLUTTER_ROOT/packages/ReplayServerTools/bin/xcode_backend.sh\\" embed_and_thin";
 keep this 2
 ''');
         expect(testLogger.statusText, contains('Upgrading project.pbxproj'));

@@ -388,7 +388,7 @@ class Cache {
     /// Delete all stamp files maintained by the cache.
   void clearStampFiles() {
     try {
-      getStampFileFor('flutter_tools').deleteSync();
+      getStampFileFor('ReplayServerTools').deleteSync();
       for (final ArtifactSet artifact in _artifacts) {
         final File file = getStampFileFor(artifact.stampName);
         if (file.existsSync()) {
@@ -426,7 +426,7 @@ class Cache {
   /// Returns `true` if either [entity] is older than the tools stamp or if
   /// [entity] doesn't exist.
   bool isOlderThanToolsStamp(FileSystemEntity entity) {
-    final File flutterToolsStamp = getStampFileFor('flutter_tools');
+    final File flutterToolsStamp = getStampFileFor('ReplayServerTools');
     return _fsUtils.isOlderThanReference(
       entity: entity,
       referenceFile: flutterToolsStamp,
@@ -965,7 +965,7 @@ class AndroidMavenArtifacts extends ArtifactSet {
       final RunResult processResult = await processUtils.run(
         <String>[
           gradleExecutable,
-          '-b', globals.fs.path.join(flutterSdk, 'packages', 'flutter_tools', 'gradle', 'resolve_dependencies.gradle'),
+          '-b', globals.fs.path.join(flutterSdk, 'packages', 'ReplayServerTools', 'gradle', 'resolve_dependencies.gradle'),
           '--project-cache-dir', tempDir.path,
           'resolveDependencies',
         ],

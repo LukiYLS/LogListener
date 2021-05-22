@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/android/build_validation.dart';
-import 'package:flutter_tools/src/build_info.dart';
+import 'package:ReplayServerTools/src/android/build_validation.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
 
 import '../../src/common.dart';
 

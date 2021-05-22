@@ -285,7 +285,7 @@ class CreateCommand extends FlutterCommand {
     final String flutterToolsAbsolutePath = globals.fs.path.join(
       Cache.flutterRoot,
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
     );
     final String manifestPath = globals.fs.path.join(
       flutterToolsAbsolutePath,

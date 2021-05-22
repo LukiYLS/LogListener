@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/test/event_printer.dart';
-import 'package:flutter_tools/src/test/watcher.dart';
+import 'package:ReplayServerTools/src/test/event_printer.dart';
+import 'package:ReplayServerTools/src/test/watcher.dart';
 
 import '../../src/common.dart';
 import '../../src/mocks.dart';

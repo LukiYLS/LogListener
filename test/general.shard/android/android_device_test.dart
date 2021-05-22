@@ -7,16 +7,16 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/android/android_console.dart';
-import 'package:flutter_tools/src/android/android_device.dart';
-import 'package:flutter_tools/src/android/android_sdk.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/device.dart';
-import 'package:flutter_tools/src/project.dart';
+import 'package:ReplayServerTools/src/android/android_console.dart';
+import 'package:ReplayServerTools/src/android/android_device.dart';
+import 'package:ReplayServerTools/src/android/android_sdk.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/device.dart';
+import 'package:ReplayServerTools/src/project.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 

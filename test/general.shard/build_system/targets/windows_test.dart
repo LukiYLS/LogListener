@@ -4,17 +4,17 @@
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/build_system/depfile.dart';
-import 'package:flutter_tools/src/build_system/targets/assets.dart';
-import 'package:flutter_tools/src/build_system/targets/common.dart';
-import 'package:flutter_tools/src/build_system/targets/windows.dart';
-import 'package:flutter_tools/src/convert.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/build_system/depfile.dart';
+import 'package:ReplayServerTools/src/build_system/targets/assets.dart';
+import 'package:ReplayServerTools/src/build_system/targets/common.dart';
+import 'package:ReplayServerTools/src/build_system/targets/windows.dart';
+import 'package:ReplayServerTools/src/convert.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../src/common.dart';
@@ -37,7 +37,7 @@ const List<String> kRequiredFiles = <String>[
   r'C:\bin\cache\artifacts\engine\windows-x64\flutter_windows.h',
   r'C:\bin\cache\artifacts\engine\windows-x64\icudtl.dat',
   r'C:\bin\cache\artifacts\engine\windows-x64\cpp_client_wrapper\foo',
-  r'C:\packages\flutter_tools\lib\src\build_system\targets\windows.dart',
+  r'C:\packages\ReplayServerTools\lib\src\build_system\targets\windows.dart',
 ];
 
 void main() {

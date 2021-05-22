@@ -3,12 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/create.dart';
-import 'package:flutter_tools/src/doctor.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/create.dart';
+import 'package:ReplayServerTools/src/doctor.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -38,9 +38,9 @@ void main() {
         }
         // Set up enough of the packages to satisfy the templating code.
         final File packagesFile = globals.fs.file(
-          globals.fs.path.join('flutter', 'packages', 'flutter_tools', '.packages'));
+          globals.fs.path.join('flutter', 'packages', 'ReplayServerTools', '.packages'));
         final File flutterManifest = globals.fs.file(
-          globals.fs.path.join('flutter', 'packages', 'flutter_tools', 'templates', 'template_manifest.json'))
+          globals.fs.path.join('flutter', 'packages', 'ReplayServerTools', 'templates', 'template_manifest.json'))
             ..createSync(recursive: true);
         final Directory templateImagesDirectory = globals.fs.directory('flutter_template_images');
         templateImagesDirectory.createSync(recursive: true);

@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/process.dart';
-import 'package:flutter_tools/src/base/terminal.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/process.dart';
+import 'package:ReplayServerTools/src/base/terminal.dart';
 
 import '../src/common.dart';
 import 'test_utils.dart';
@@ -32,7 +32,7 @@ void main() {
 
   setUp(() {
     parentDirectory = fileSystem.systemTempDirectory
-      .createTempSync('flutter_tools.');
+      .createTempSync('ReplayServerTools.');
     parentDirectory.createSync(recursive: true);
   });
 

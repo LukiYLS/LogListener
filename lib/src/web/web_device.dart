@@ -125,7 +125,7 @@ abstract class ChromiumDevice extends Device {
     bool ipv6 = false,
     String userIdentifier,
   }) async {
-    // See [ResidentWebRunner.run] in flutter_tools/lib/src/resident_web_runner.dart
+    // See [ResidentWebRunner.run] in ReplayServerTools/lib/src/resident_web_runner.dart
     // for the web initialization and server logic.
     final String url = platformArgs['uri'] as String;
     final bool launchChrome = platformArgs['no-launch-chrome'] != true;

@@ -6,11 +6,11 @@ import 'dart:async';
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/os.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/web/chrome.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/os.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/web/chrome.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';
@@ -60,7 +60,7 @@ void main() {
   testWithoutContext('can launch chrome and connect to the devtools', () async {
     expect(
       () async => await _testLaunchChrome(
-        '/.tmp_rand0/flutter_tools_chrome_device.rand0',
+        '/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
         processManager,
         chromeLauncher,
       ),
@@ -70,14 +70,14 @@ void main() {
 
   testWithoutContext('cannot have two concurrent instances of chrome', () async {
     await _testLaunchChrome(
-      '/.tmp_rand0/flutter_tools_chrome_device.rand0',
+      '/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
       processManager,
       chromeLauncher,
     );
 
     expect(
       () async => await _testLaunchChrome(
-        '/.tmp_rand0/flutter_tools_chrome_device.rand1',
+        '/.tmp_rand0/ReplayServerTools_chrome_device.rand1',
         processManager,
         chromeLauncher,
       ),
@@ -87,7 +87,7 @@ void main() {
 
   testWithoutContext('can launch new chrome after stopping a previous chrome', () async {
     final Chromium chrome = await _testLaunchChrome(
-      '/.tmp_rand0/flutter_tools_chrome_device.rand0',
+      '/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
       processManager,
       chromeLauncher,
     );
@@ -95,7 +95,7 @@ void main() {
 
     expect(
       () async => await _testLaunchChrome(
-        '/.tmp_rand0/flutter_tools_chrome_device.rand1',
+        '/.tmp_rand0/ReplayServerTools_chrome_device.rand1',
         processManager,
         chromeLauncher,
       ),
@@ -107,7 +107,7 @@ void main() {
     processManager.addCommand(const FakeCommand(
       command: <String>[
         'example_chrome',
-        '--user-data-dir=/.tmp_rand0/flutter_tools_chrome_device.rand0',
+        '--user-data-dir=/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
         '--remote-debugging-port=10000',
         ...kChromeArgs,
         'example_url',
@@ -129,7 +129,7 @@ void main() {
     processManager.addCommand(const FakeCommand(
       command: <String>[
         'example_chrome',
-        '--user-data-dir=/.tmp_rand0/flutter_tools_chrome_device.rand0',
+        '--user-data-dir=/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
         '--remote-debugging-port=1234',
         ...kChromeArgs,
         '--headless',
@@ -172,7 +172,7 @@ void main() {
 
     processManager.addCommand(FakeCommand(command: const <String>[
       'example_chrome',
-      '--user-data-dir=/.tmp_rand0/flutter_tools_chrome_device.rand0',
+      '--user-data-dir=/.tmp_rand0/ReplayServerTools_chrome_device.rand0',
       '--remote-debugging-port=1234',
       ...kChromeArgs,
       'example_url',
@@ -192,7 +192,7 @@ void main() {
 
     // validate local storage
     final Directory storageDir = fileSystem
-        .directory('.tmp_rand0/flutter_tools_chrome_device.rand0')
+        .directory('.tmp_rand0/ReplayServerTools_chrome_device.rand0')
         .childDirectory('Default')
         .childDirectory('Local Storage')
         .childDirectory('leveldb');

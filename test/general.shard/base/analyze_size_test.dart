@@ -4,10 +4,10 @@
 
 import 'package:archive/archive.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/analyze_size.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/base/analyze_size.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

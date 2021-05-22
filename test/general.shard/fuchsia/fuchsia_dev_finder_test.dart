@@ -4,10 +4,10 @@
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/fuchsia/fuchsia_dev_finder.dart';
-import 'package:flutter_tools/src/fuchsia/fuchsia_sdk.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/fuchsia/fuchsia_dev_finder.dart';
+import 'package:ReplayServerTools/src/fuchsia/fuchsia_sdk.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 

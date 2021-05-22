@@ -4,9 +4,9 @@
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/analyze_base.dart';
-import 'package:flutter_tools/src/dart/analysis.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/analyze_base.dart';
+import 'package:ReplayServerTools/src/dart/analysis.dart';
 
 import '../../src/common.dart';
 

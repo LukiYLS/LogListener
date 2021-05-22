@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/doctor.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/linux/linux_doctor.dart';
-import 'package:flutter_tools/src/web/web_validator.dart';
-import 'package:flutter_tools/src/windows/visual_studio_validator.dart';
+import 'package:ReplayServerTools/src/doctor.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/linux/linux_doctor.dart';
+import 'package:ReplayServerTools/src/web/web_validator.dart';
+import 'package:ReplayServerTools/src/windows/visual_studio_validator.dart';
 
 import '../src/common.dart';
 import '../src/testbed.dart';

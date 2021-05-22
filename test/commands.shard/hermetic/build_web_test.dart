@@ -4,18 +4,18 @@
 
 import 'package:args/command_runner.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/build.dart';
-import 'package:flutter_tools/src/commands/build_web.dart';
-import 'package:flutter_tools/src/dart/pub.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/web/compile.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/build.dart';
+import 'package:ReplayServerTools/src/commands/build_web.dart';
+import 'package:ReplayServerTools/src/dart/pub.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/web/compile.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';
@@ -99,7 +99,7 @@ void main() {
     applyMocksToCommand(buildCommand);
     final CommandRunner<void> runner = createTestCommandRunner(buildCommand);
     final List<String> dependencies = <String>[
-      fileSystem.path.join('packages', 'flutter_tools', 'lib', 'src', 'build_system', 'targets', 'web.dart'),
+      fileSystem.path.join('packages', 'ReplayServerTools', 'lib', 'src', 'build_system', 'targets', 'web.dart'),
       fileSystem.path.join('bin', 'cache', 'flutter_web_sdk'),
       fileSystem.path.join('bin', 'cache', 'dart-sdk', 'bin', 'snapshots', 'dart2js.dart.snapshot'),
       fileSystem.path.join('bin', 'cache', 'dart-sdk', 'bin', 'dart'),

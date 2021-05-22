@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/build_info.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
 
 import '../src/common.dart';
 

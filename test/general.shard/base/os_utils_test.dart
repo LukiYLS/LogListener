@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/os.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/base/signals.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/os.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/signals.dart';
 import 'package:process/process.dart';
 
 import '../../src/common.dart';
@@ -18,7 +18,7 @@ void main() {
 
     setUp(() {
       fileSystem = LocalFileSystem.test(signals: Signals.test());
-      tempDir = fileSystem.systemTempDirectory.createTempSync('flutter_tools_os_utils_test.');
+      tempDir = fileSystem.systemTempDirectory.createTempSync('ReplayServerTools_os_utils_test.');
     });
 
     tearDown(() {

@@ -4,18 +4,18 @@
 
 import 'package:args/command_runner.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/build_system/targets/common.dart';
-import 'package:flutter_tools/src/build_system/targets/icon_tree_shaker.dart';
-import 'package:flutter_tools/src/bundle.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/build_bundle.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/build_system/targets/common.dart';
+import 'package:ReplayServerTools/src/build_system/targets/icon_tree_shaker.dart';
+import 'package:ReplayServerTools/src/bundle.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/build_bundle.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -27,7 +27,7 @@ void main() {
   MockBundleBuilder mockBundleBuilder;
 
   setUp(() {
-    tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_packages_test.');
+    tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_packages_test.');
 
     mockBundleBuilder = MockBundleBuilder();
     when(

@@ -5,11 +5,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -302,7 +302,7 @@ Future<ProcessResult> _runFlutterTest(
   }
 
   final List<String> args = <String>[
-    globals.fs.path.absolute(globals.fs.path.join('bin', 'flutter_tools.dart')),
+    globals.fs.path.absolute(globals.fs.path.join('bin', 'ReplayServerTools.dart')),
     'test',
     '--no-color',
     '--no-version-check',

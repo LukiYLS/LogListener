@@ -6,17 +6,17 @@ import 'dart:async';
 
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/context.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/flutter_manifest.dart';
-import 'package:flutter_tools/src/ios/plist_parser.dart';
-import 'package:flutter_tools/src/ios/xcodeproj.dart';
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/base/context.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/flutter_manifest.dart';
+import 'package:ReplayServerTools/src/ios/plist_parser.dart';
+import 'package:ReplayServerTools/src/ios/xcodeproj.dart';
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:meta/meta.dart';
 import 'package:mockito/mockito.dart';
 
@@ -762,16 +762,16 @@ void _testInMemory(String description, Future<void> testMethod()) {
   transfer(Cache().getArtifactDirectory('gradle_wrapper'), testFileSystem);
   transfer(globals.fs.directory(Cache.flutterRoot)
       .childDirectory('packages')
-      .childDirectory('flutter_tools')
+      .childDirectory('ReplayServerTools')
       .childDirectory('templates'), testFileSystem);
   transfer(globals.fs.directory(Cache.flutterRoot)
       .childDirectory('packages')
-      .childDirectory('flutter_tools')
+      .childDirectory('ReplayServerTools')
       .childDirectory('schema'), testFileSystem);
   // Set up enough of the packages to satisfy the templating code.
   final File packagesFile = testFileSystem.directory(Cache.flutterRoot)
       .childDirectory('packages')
-      .childDirectory('flutter_tools')
+      .childDirectory('ReplayServerTools')
       .childFile('.packages');
   final Directory dummyTemplateImagesDirectory = testFileSystem.directory(Cache.flutterRoot).parent;
   dummyTemplateImagesDirectory.createSync(recursive: true);

@@ -2,10 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/base/config.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/version.dart';
+import 'package:ReplayServerTools/src/base/config.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/version.dart';
 import 'package:mockito/mockito.dart';
 
 import '../src/common.dart';

@@ -6,13 +6,13 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/android/android_workflow.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/device.dart';
-import 'package:flutter_tools/src/emulator.dart';
-import 'package:flutter_tools/src/ios/ios_emulators.dart';
-import 'package:flutter_tools/src/macos/xcode.dart';
+import 'package:ReplayServerTools/src/android/android_workflow.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/device.dart';
+import 'package:ReplayServerTools/src/emulator.dart';
+import 'package:ReplayServerTools/src/ios/ios_emulators.dart';
+import 'package:ReplayServerTools/src/macos/xcode.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 

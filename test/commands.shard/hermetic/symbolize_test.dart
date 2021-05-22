@@ -6,11 +6,11 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/symbolize.dart';
-import 'package:flutter_tools/src/convert.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/symbolize.dart';
+import 'package:ReplayServerTools/src/convert.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

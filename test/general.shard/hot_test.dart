@@ -5,18 +5,18 @@
 import 'dart:async';
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
 import 'package:vm_service/vm_service.dart' as vm_service;
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/compile.dart';
-import 'package:flutter_tools/src/devfs.dart';
-import 'package:flutter_tools/src/device.dart';
-import 'package:flutter_tools/src/resident_runner.dart';
-import 'package:flutter_tools/src/run_hot.dart';
-import 'package:flutter_tools/src/vmservice.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/compile.dart';
+import 'package:ReplayServerTools/src/devfs.dart';
+import 'package:ReplayServerTools/src/device.dart';
+import 'package:ReplayServerTools/src/resident_runner.dart';
+import 'package:ReplayServerTools/src/run_hot.dart';
+import 'package:ReplayServerTools/src/vmservice.dart';
 import 'package:meta/meta.dart';
 import 'package:mockito/mockito.dart';
 

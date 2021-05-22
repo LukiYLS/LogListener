@@ -5,15 +5,15 @@
 import 'dart:io';
 
 import 'package:dwds/dwds.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/build_runner/devfs_web.dart';
-import 'package:flutter_tools/src/compile.dart';
-import 'package:flutter_tools/src/convert.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/build_runner/devfs_web.dart';
+import 'package:ReplayServerTools/src/compile.dart';
+import 'package:ReplayServerTools/src/convert.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:mockito/mockito.dart';
 import 'package:package_config/package_config.dart';
 import 'package:shelf/shelf.dart';
@@ -39,7 +39,7 @@ void main() {
 
   setUpAll(() async {
     packages = PackageConfig(<Package>[
-      Package('flutter_tools', Uri.file('/flutter_tools/lib/').normalizePath())
+      Package('ReplayServerTools', Uri.file('/ReplayServerTools/lib/').normalizePath())
     ]);
   });
 
@@ -414,13 +414,13 @@ void main() {
   test('serves /packages/<package>/<path> files as if they were '
        'package:<package>/<path> uris', () => testbed.run(() async {
     final Uri expectedUri = packages.resolve(
-        Uri.parse('package:flutter_tools/foo.dart'));
+        Uri.parse('package:ReplayServerTools/foo.dart'));
     final File source = globals.fs.file(globals.fs.path.fromUri(expectedUri))
       ..createSync(recursive: true)
       ..writeAsBytesSync(<int>[1, 2, 3]);
 
     final Response response = await webAssetServer
-      .handleRequest(Request('GET', Uri.parse('http:///packages/flutter_tools/foo.dart')));
+      .handleRequest(Request('GET', Uri.parse('http:///packages/ReplayServerTools/foo.dart')));
 
     expect(response.headers, allOf(<Matcher>[
       containsPair(HttpHeaders.contentLengthHeader, '3'),

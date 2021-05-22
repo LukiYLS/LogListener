@@ -29,7 +29,7 @@ class UnpackLinux extends Target {
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/linux.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/linux.dart'),
   ];
 
   @override
@@ -97,7 +97,7 @@ abstract class BundleLinuxAssets extends Target {
 
   @override
   List<Source> get inputs => const <Source>[
-    Source.pattern('{FLUTTER_ROOT}/packages/flutter_tools/lib/src/build_system/targets/linux.dart'),
+    Source.pattern('{FLUTTER_ROOT}/packages/ReplayServerTools/lib/src/build_system/targets/linux.dart'),
     Source.pattern('{PROJECT_DIR}/pubspec.yaml'),
     ...IconTreeShaker.inputs,
   ];

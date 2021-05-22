@@ -4,15 +4,15 @@
 
 import 'dart:async';
 
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/io.dart' as io;
-import 'package:flutter_tools/src/convert.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/io.dart' as io;
+import 'package:ReplayServerTools/src/convert.dart';
 import 'package:vm_service/vm_service.dart' as vm_service;
 import 'package:mockito/mockito.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/device.dart';
-import 'package:flutter_tools/src/version.dart';
-import 'package:flutter_tools/src/vmservice.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/device.dart';
+import 'package:ReplayServerTools/src/version.dart';
+import 'package:ReplayServerTools/src/vmservice.dart';
 import 'package:fake_async/fake_async.dart';
 
 import '../src/common.dart';

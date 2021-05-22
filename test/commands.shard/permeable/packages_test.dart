@@ -6,15 +6,15 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/bot_detector.dart';
-import 'package:flutter_tools/src/base/file_system.dart' hide IOSink;
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/packages.dart';
-import 'package:flutter_tools/src/dart/pub.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/base/bot_detector.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart' hide IOSink;
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/packages.dart';
+import 'package:ReplayServerTools/src/dart/pub.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:process/process.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -27,7 +27,7 @@ void main() {
     Directory tempDir;
 
     setUp(() {
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_packages_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_packages_test.');
     });
 
     tearDown(() {

@@ -5,15 +5,15 @@
 import 'package:file/file.dart';
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/android/gradle_utils.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart' show InternetAddress, SocketException;
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/os.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/android/gradle_utils.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart' show InternetAddress, SocketException;
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/os.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 import 'package:meta/meta.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
@@ -574,7 +574,7 @@ void main() {
       osUtils: MockOperatingSystemUtils(),
       rootOverride: fileSystem.currentDirectory,
     );
-    final File toolStampFile = fileSystem.file('bin/cache/flutter_tools.stamp');
+    final File toolStampFile = fileSystem.file('bin/cache/ReplayServerTools.stamp');
     final File stampFile = cache.getStampFileFor(artifactSet.stampName);
     stampFile.createSync(recursive: true);
     toolStampFile.createSync(recursive: true);
@@ -602,7 +602,7 @@ void main() {
       osUtils: MockOperatingSystemUtils(),
       rootOverride: fileSystem.currentDirectory,
     );
-    final File toolStampFile = fileSystem.file('bin/cache/flutter_tools.stamp');
+    final File toolStampFile = fileSystem.file('bin/cache/ReplayServerTools.stamp');
     final File stampFile = cache.getStampFileFor(artifactSet.stampName);
     toolStampFile.createSync(recursive: true);
 

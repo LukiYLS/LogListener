@@ -8,7 +8,7 @@ import '../src/common.dart';
 import 'test_utils.dart';
 
 void main() {
-  final String flutterTools = fileSystem.path.join(getFlutterRoot(), 'packages', 'flutter_tools');
+  final String flutterTools = fileSystem.path.join(getFlutterRoot(), 'packages', 'ReplayServerTools');
 
   test('no imports of commands/* or test/* in lib/src/*', () {
     final List<String> skippedPaths = <String> [

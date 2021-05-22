@@ -3,12 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart' show ProcessException;
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/convert.dart';
-import 'package:flutter_tools/src/windows/visual_studio.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart' show ProcessException;
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/convert.dart';
+import 'package:ReplayServerTools/src/windows/visual_studio.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

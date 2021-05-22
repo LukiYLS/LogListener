@@ -4,11 +4,11 @@
 
 import 'package:meta/meta.dart';
 
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/android/android_builder.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/project.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/android/android_builder.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/project.dart';
 
 /// A fake implementation of [AndroidBuilder].
 class FakeAndroidBuilder implements AndroidBuilder {

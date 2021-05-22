@@ -6,25 +6,25 @@ import 'dart:async';
 
 import 'package:archive/archive.dart';
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/android/android_sdk.dart';
-import 'package:flutter_tools/src/android/android_studio.dart';
-import 'package:flutter_tools/src/android/gradle.dart';
-import 'package:flutter_tools/src/android/gradle_errors.dart';
-import 'package:flutter_tools/src/android/gradle_utils.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/common.dart';
-import 'package:flutter_tools/src/base/context.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/base/terminal.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/ios/xcodeproj.dart';
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/reporting/reporting.dart';
+import 'package:ReplayServerTools/src/android/android_sdk.dart';
+import 'package:ReplayServerTools/src/android/android_studio.dart';
+import 'package:ReplayServerTools/src/android/gradle.dart';
+import 'package:ReplayServerTools/src/android/gradle_errors.dart';
+import 'package:ReplayServerTools/src/android/gradle_utils.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/common.dart';
+import 'package:ReplayServerTools/src/base/context.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/terminal.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/ios/xcodeproj.dart';
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/reporting/reporting.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 
@@ -389,7 +389,7 @@ include ':app'
       final String toolGradlePath = globals.fs.path.join(
           globals.fs.path.absolute(Cache.flutterRoot),
           'packages',
-          'flutter_tools',
+          'ReplayServerTools',
           'gradle');
       globals.fs.directory(toolGradlePath).createSync(recursive: true);
       globals.fs.file(globals.fs.path.join(toolGradlePath, 'settings.gradle.legacy_versions'))
@@ -422,7 +422,7 @@ include ':app'
       final String toolGradlePath = globals.fs.path.join(
           globals.fs.path.absolute(Cache.flutterRoot),
           'packages',
-          'flutter_tools',
+          'ReplayServerTools',
           'gradle');
       globals.fs.directory(toolGradlePath).createSync(recursive: true);
       globals.fs.file(globals.fs.path.join(toolGradlePath, 'settings.gradle.legacy_versions'))
@@ -828,7 +828,7 @@ plugin2=${plugin2.path}
       final String initScript = globals.fs.path.join(
         flutterRoot,
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'gradle',
         'aar_init_script.gradle',
       );
@@ -2573,8 +2573,8 @@ plugin1=${plugin1.path}
     // If this test fails, you probably edited templates/app/android.tmpl.
     // That's fine, but you now need to add a copy of that file to gradle/settings.gradle.legacy_versions, separated
     // from the previous versions by a line that just says ";EOF".
-    final File templateSettingsDotGradle = globals.fs.file(globals.fs.path.join(Cache.flutterRoot, 'packages', 'flutter_tools', 'templates', 'app', 'android.tmpl', 'settings.gradle'));
-    final File legacySettingsDotGradleFiles = globals.fs.file(globals.fs.path.join(Cache.flutterRoot, 'packages','flutter_tools', 'gradle', 'settings.gradle.legacy_versions'));
+    final File templateSettingsDotGradle = globals.fs.file(globals.fs.path.join(Cache.flutterRoot, 'packages', 'ReplayServerTools', 'templates', 'app', 'android.tmpl', 'settings.gradle'));
+    final File legacySettingsDotGradleFiles = globals.fs.file(globals.fs.path.join(Cache.flutterRoot, 'packages','ReplayServerTools', 'gradle', 'settings.gradle.legacy_versions'));
     expect(
       legacySettingsDotGradleFiles.readAsStringSync().split(';EOF').map<String>((String body) => body.trim()),
       contains(templateSettingsDotGradle.readAsStringSync().trim()),

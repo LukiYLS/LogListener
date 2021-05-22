@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/platform_plugins.dart';
+import 'package:ReplayServerTools/src/platform_plugins.dart';
 import 'package:mockito/mockito.dart';
 import 'package:path/path.dart' as p;
 

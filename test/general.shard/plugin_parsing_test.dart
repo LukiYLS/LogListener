@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/platform_plugins.dart';
-import 'package:flutter_tools/src/plugins.dart';
+import 'package:ReplayServerTools/src/platform_plugins.dart';
+import 'package:ReplayServerTools/src/plugins.dart';
 import 'package:yaml/yaml.dart';
 
 import '../src/common.dart';

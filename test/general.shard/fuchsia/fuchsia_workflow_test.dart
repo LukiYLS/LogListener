@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/fuchsia/fuchsia_sdk.dart';
-import 'package:flutter_tools/src/fuchsia/fuchsia_workflow.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/fuchsia/fuchsia_sdk.dart';
+import 'package:ReplayServerTools/src/fuchsia/fuchsia_workflow.dart';
 
 import '../../src/common.dart';
 import '../../src/testbed.dart';

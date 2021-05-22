@@ -5,11 +5,11 @@
 import 'dart:convert';
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/base/terminal.dart';
-import 'package:flutter_tools/src/ios/plist_parser.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/base/terminal.dart';
+import 'package:ReplayServerTools/src/ios/plist_parser.dart';
 
 import '../src/common.dart';
 import 'test_utils.dart';

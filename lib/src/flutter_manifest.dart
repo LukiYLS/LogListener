@@ -350,7 +350,7 @@ class FontAsset {
 @visibleForTesting
 String buildSchemaDir(FileSystem fileSystem) {
   return fileSystem.path.join(
-    fileSystem.path.absolute(Cache.flutterRoot), 'packages', 'flutter_tools', 'schema',
+    fileSystem.path.absolute(Cache.flutterRoot), 'packages', 'ReplayServerTools', 'schema',
   );
 }
 
@@ -363,7 +363,7 @@ String buildSchemaPath(FileSystem fileSystem) {
 }
 
 /// This method should be kept in sync with the schema in
-/// `$FLUTTER_ROOT/packages/flutter_tools/schema/pubspec_yaml.json`,
+/// `$FLUTTER_ROOT/packages/ReplayServerTools/schema/pubspec_yaml.json`,
 /// but avoid introducing dependencies on packages for simple validation.
 bool _validate(dynamic manifest, Logger logger) {
   final List<String> errors = <String>[];

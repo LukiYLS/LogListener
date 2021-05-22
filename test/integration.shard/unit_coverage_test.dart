@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
 import 'package:process/process.dart';
 
 import '../src/common.dart';
@@ -51,7 +51,7 @@ end_of_record
 ''');
 
     final String dartScript = fileSystem.path.join(getFlutterRoot(), 'bin', 'dart');
-    final String coverageScript = fileSystem.path.join(getFlutterRoot(), 'packages', 'flutter_tools', 'tool', 'unit_coverage.dart');
+    final String coverageScript = fileSystem.path.join(getFlutterRoot(), 'packages', 'ReplayServerTools', 'tool', 'unit_coverage.dart');
     final ProcessResult result = await const LocalProcessManager().run(<String>[
       dartScript,
       coverageScript,

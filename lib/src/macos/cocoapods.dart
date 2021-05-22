@@ -278,7 +278,7 @@ class CocoaPods {
     final File podfileTemplate = _fileSystem.file(_fileSystem.path.join(
       Cache.flutterRoot,
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       'templates',
       'cocoapods',
       podfileTemplateName,

@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:flutter_tools/src/android/android_device.dart';
+import 'package:ReplayServerTools/src/android/android_device.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

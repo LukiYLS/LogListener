@@ -22,7 +22,7 @@ $ ../../bin/flutter --version
 
 To run Flutter Tools from source, in this directory run:
 ```shell
-$ ../../bin/cache/dart-sdk/bin/dart bin/flutter_tools.dart
+$ ../../bin/cache/dart-sdk/bin/dart bin/ReplayServerTools.dart
 ```
 followed by command-line arguments, as usual.
 
@@ -81,5 +81,5 @@ $ ../../bin/cache/dart-sdk/bin/pub run test test/general.shard/utils_test.dart
 To force the Flutter Tools snapshot to be regenerated, delete the following
 files:
 ```shell
-$ rm ../../bin/cache/flutter_tools.stamp ../../bin/cache/flutter_tools.snapshot
+$ rm ../../bin/cache/ReplayServerTools.stamp ../../bin/cache/ReplayServerTools.snapshot
 ```

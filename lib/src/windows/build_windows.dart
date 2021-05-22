@@ -198,7 +198,7 @@ int _compareTemplateVersions(WindowsProject project) {
   final int expectedVersion = int.parse(globals.fs.file(globals.fs.path.join(
     globals.fs.path.absolute(Cache.flutterRoot),
     'packages',
-    'flutter_tools',
+    'ReplayServerTools',
     'templates',
     'app',
     'windows.tmpl',

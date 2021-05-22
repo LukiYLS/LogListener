@@ -3,11 +3,11 @@
 // found in the LICENSE file.
 
 import 'package:file/memory.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/build_system/targets/localizations.dart';
-import 'package:flutter_tools/src/localizations/gen_l10n.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/build_system/targets/localizations.dart';
+import 'package:ReplayServerTools/src/localizations/gen_l10n.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../src/common.dart';

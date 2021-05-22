@@ -67,7 +67,7 @@ class IdeConfigCommand extends FlutterCommand {
     return globals.fs.directory(globals.fs.path.join(
       Cache.flutterRoot,
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       'ide_templates',
       _ideName,
     ));
@@ -77,7 +77,7 @@ class IdeConfigCommand extends FlutterCommand {
     return globals.fs.directory(globals.fs.path.join(
       Cache.flutterRoot,
       'packages',
-      'flutter_tools',
+      'ReplayServerTools',
       'templates',
     ));
   }

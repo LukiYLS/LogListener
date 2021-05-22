@@ -173,10 +173,10 @@ void createSettingsAarGradle(Directory androidDirectory) {
       timeout: timeoutConfiguration.fastOperation);
 
   final String flutterRoot = globals.fs.path.absolute(Cache.flutterRoot);
-  final File legacySettingsDotGradleFiles = globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','flutter_tools',
+  final File legacySettingsDotGradleFiles = globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','ReplayServerTools',
       'gradle', 'settings.gradle.legacy_versions'));
   assert(legacySettingsDotGradleFiles.existsSync());
-  final String settingsAarContent = globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','flutter_tools',
+  final String settingsAarContent = globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','ReplayServerTools',
       'gradle', 'settings_aar.gradle.tmpl')).readAsStringSync();
 
   // Get the `settings.gradle` content variants that should be patched.
@@ -194,7 +194,7 @@ void createSettingsAarGradle(Directory androidDirectory) {
     status.cancel();
     globals.printStatus('$warningMark Flutter tried to create the file `$newSettingsRelativeFile`, but failed.');
     // Print how to manually update the file.
-    globals.printStatus(globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','flutter_tools',
+    globals.printStatus(globals.fs.file(globals.fs.path.join(flutterRoot, 'packages','ReplayServerTools',
         'gradle', 'manual_migration_settings.gradle.md')).readAsStringSync());
     throwToolExit('Please create the file and run this command again.');
   }
@@ -581,7 +581,7 @@ Future<void> buildGradleAar({
   final String initScript = globals.fs.path.join(
     flutterRoot,
     'packages',
-    'flutter_tools',
+    'ReplayServerTools',
     'gradle',
     'aar_init_script.gradle',
   );

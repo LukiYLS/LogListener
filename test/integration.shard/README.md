@@ -4,7 +4,7 @@ These tests are not hermetic, and use the actual Flutter SDK. While
 they don't require actual devices, they run `flutter_tester` to test
 Dart VM and Flutter integration.
 
-Use this command to run (from the `flutter_tools` directory):
+Use this command to run (from the `ReplayServerTools` directory):
 
 ```shell
 ../../bin/cache/dart-sdk/bin/pub run test test/integration.shard

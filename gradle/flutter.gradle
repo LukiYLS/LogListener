@@ -161,7 +161,7 @@ class FlutterPlugin implements Plugin<Project> {
         }
 
         if (shouldShrinkResources(project)) {
-            String flutterProguardRules = Paths.get(flutterRoot.absolutePath, "packages", "flutter_tools",
+            String flutterProguardRules = Paths.get(flutterRoot.absolutePath, "packages", "ReplayServerTools",
                     "gradle", "flutter_proguard_rules.pro")
             project.android.buildTypes {
                 release {

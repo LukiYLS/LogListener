@@ -7,20 +7,20 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/net.dart';
-import 'package:flutter_tools/src/base/platform.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/create.dart';
-import 'package:flutter_tools/src/dart/pub.dart';
-import 'package:flutter_tools/src/features.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
-import 'package:flutter_tools/src/project.dart';
-import 'package:flutter_tools/src/version.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/net.dart';
+import 'package:ReplayServerTools/src/base/platform.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/create.dart';
+import 'package:ReplayServerTools/src/dart/pub.dart';
+import 'package:ReplayServerTools/src/features.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/project.dart';
+import 'package:ReplayServerTools/src/version.dart';
 import 'package:mockito/mockito.dart';
 import 'package:process/process.dart';
 import 'package:pub_semver/pub_semver.dart';
@@ -59,7 +59,7 @@ void main() {
   setUp(() {
     loggingProcessManager = LoggingProcessManager();
     logger = BufferLogger.test();
-    tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_create_test.');
+    tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_create_test.');
     projectDir = tempDir.childDirectory('flutter_project');
     mockFlutterVersion = MockFlutterVersion();
   });
@@ -2071,14 +2071,14 @@ Future<void> _createAndAnalyzeProject(
 Future<void> _ensureFlutterToolsSnapshot() async {
   final String flutterToolsPath = globals.fs.path.absolute(globals.fs.path.join(
     'bin',
-    'flutter_tools.dart',
+    'ReplayServerTools.dart',
   ));
   final String flutterToolsSnapshotPath = globals.fs.path.absolute(globals.fs.path.join(
     '..',
     '..',
     'bin',
     'cache',
-    'flutter_tools.snapshot',
+    'ReplayServerTools.snapshot',
   ));
   final String dotPackages = globals.fs.path.absolute(globals.fs.path.join(
     '.packages',
@@ -2111,7 +2111,7 @@ Future<void> _restoreFlutterToolsSnapshot() async {
     '..',
     'bin',
     'cache',
-    'flutter_tools.snapshot',
+    'ReplayServerTools.snapshot',
   ));
 
   final File snapshotBackup = globals.fs.file(flutterToolsSnapshotPath + '.bak');
@@ -2129,7 +2129,7 @@ Future<void> _analyzeProject(String workingDir) async {
     '..',
     'bin',
     'cache',
-    'flutter_tools.snapshot',
+    'ReplayServerTools.snapshot',
   ));
 
   final List<String> args = <String>[
@@ -2155,7 +2155,7 @@ Future<void> _runFlutterTest(Directory workingDir, { String target }) async {
     '..',
     'bin',
     'cache',
-    'flutter_tools.snapshot',
+    'ReplayServerTools.snapshot',
   ));
 
   // While flutter test does get packages, it doesn't write version

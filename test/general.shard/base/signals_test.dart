@@ -5,8 +5,8 @@
 import 'dart:async';
 import 'dart:io' as io;
 
-import 'package:flutter_tools/src/base/io.dart';
-import 'package:flutter_tools/src/base/signals.dart';
+import 'package:ReplayServerTools/src/base/io.dart';
+import 'package:ReplayServerTools/src/base/signals.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../src/common.dart';

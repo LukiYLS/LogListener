@@ -5,11 +5,11 @@
 import 'dart:async';
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/template.dart';
-import 'package:flutter_tools/src/commands/ide_config.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/template.dart';
+import 'package:ReplayServerTools/src/commands/ide_config.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -110,9 +110,9 @@ void main() {
     });
 
     setUp(() {
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_ide_config_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_ide_config_test.');
       final Directory packagesDir = tempDir.childDirectory('packages')..createSync(recursive: true);
-      toolsDir = packagesDir.childDirectory('flutter_tools')..createSync();
+      toolsDir = packagesDir.childDirectory('ReplayServerTools')..createSync();
       templateDir = toolsDir.childDirectory('ide_templates')..createSync();
       intellijDir = templateDir.childDirectory('intellij')..createSync();
     });
@@ -193,7 +193,7 @@ void main() {
       );
       final String flutterIml = globals.fs.path.join(
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'ide_templates',
         'intellij',
         'flutter.iml${Template.copyTemplateExtension}',
@@ -263,7 +263,7 @@ void main() {
       );
       final String flutterIml = globals.fs.path.join(
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'ide_templates',
         'intellij',
         'flutter.iml${Template.copyTemplateExtension}',
@@ -299,7 +299,7 @@ void main() {
       );
       String deepIml = globals.fs.path.join(
         'packages',
-        'flutter_tools',
+        'ReplayServerTools',
         'ide_templates',
         'intellij');
       // Remove the all the dir entries too.

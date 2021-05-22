@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:args/command_runner.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/cache.dart';
-import 'package:flutter_tools/src/commands/format.dart';
-import 'package:flutter_tools/src/globals.dart' as globals;
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/cache.dart';
+import 'package:ReplayServerTools/src/commands/format.dart';
+import 'package:ReplayServerTools/src/globals.dart' as globals;
 
 import '../../src/common.dart';
 import '../../src/context.dart';
@@ -17,7 +17,7 @@ void main() {
 
     setUp(() {
       Cache.disableLocking();
-      tempDir = globals.fs.systemTempDirectory.createTempSync('flutter_tools_format_test.');
+      tempDir = globals.fs.systemTempDirectory.createTempSync('ReplayServerTools_format_test.');
     });
 
     tearDown(() {

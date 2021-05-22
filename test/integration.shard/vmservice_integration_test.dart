@@ -5,8 +5,8 @@
 import 'dart:async';
 
 import 'package:file/file.dart';
-import 'package:flutter_tools/src/base/dds.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/base/dds.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
 import 'package:matcher/matcher.dart';
 import 'package:vm_service/vm_service.dart';
 import 'package:vm_service/vm_service_io.dart';

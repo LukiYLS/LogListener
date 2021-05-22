@@ -50,7 +50,7 @@ class Template {
     for (final FileSystemEntity entity in templateFiles.whereType<File>()) {
       if (_templateManifest != null && !_templateManifest.contains(Uri.file(entity.absolute.path))) {
         _logger.printTrace('Skipping ${entity.absolute.path}, missing from the template manifest.');
-        // Skip stale files in the flutter_tools directory.
+        // Skip stale files in the ReplayServerTools directory.
         continue;
       }
 
@@ -281,7 +281,7 @@ class Template {
 
 Directory _templateDirectoryInPackage(String name, FileSystem fileSystem) {
   final String templatesDir = fileSystem.path.join(Cache.flutterRoot,
-      'packages', 'flutter_tools', 'templates');
+      'packages', 'ReplayServerTools', 'templates');
   return fileSystem.directory(fileSystem.path.join(templatesDir, name));
 }
 
@@ -289,7 +289,7 @@ Directory _templateDirectoryInPackage(String name, FileSystem fileSystem) {
 // flutter_template_images, to resolve image placeholder against.
 Future<Directory> _templateImageDirectory(String name, FileSystem fileSystem, Logger logger, Pub pub) async {
   final String toolPackagePath = fileSystem.path.join(
-      Cache.flutterRoot, 'packages', 'flutter_tools');
+      Cache.flutterRoot, 'packages', 'ReplayServerTools');
   final String packageFilePath = fileSystem.path.join(toolPackagePath, kPackagesFileName);
   // Ensure that .packgaes is present.
   if (!fileSystem.file(packageFilePath).existsSync()) {

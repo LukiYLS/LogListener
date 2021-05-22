@@ -4,15 +4,15 @@
 
 import 'package:file/memory.dart';
 import 'package:file_testing/file_testing.dart';
-import 'package:flutter_tools/src/artifacts.dart';
-import 'package:flutter_tools/src/base/logger.dart';
-import 'package:flutter_tools/src/base/file_system.dart';
-import 'package:flutter_tools/src/build_info.dart';
-import 'package:flutter_tools/src/build_system/build_system.dart';
-import 'package:flutter_tools/src/build_system/targets/assets.dart';
-import 'package:flutter_tools/src/build_system/targets/common.dart';
-import 'package:flutter_tools/src/build_system/targets/linux.dart';
-import 'package:flutter_tools/src/convert.dart';
+import 'package:ReplayServerTools/src/artifacts.dart';
+import 'package:ReplayServerTools/src/base/logger.dart';
+import 'package:ReplayServerTools/src/base/file_system.dart';
+import 'package:ReplayServerTools/src/build_info.dart';
+import 'package:ReplayServerTools/src/build_system/build_system.dart';
+import 'package:ReplayServerTools/src/build_system/targets/assets.dart';
+import 'package:ReplayServerTools/src/build_system/targets/common.dart';
+import 'package:ReplayServerTools/src/build_system/targets/linux.dart';
+import 'package:ReplayServerTools/src/convert.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../src/common.dart';
@@ -184,7 +184,7 @@ void setUpCacheDirectory(FileSystem fileSystem) {
   fileSystem.file('linux-x64/libflutter_linux_gtk.so').createSync(recursive: true);
   fileSystem.file('linux-x64/flutter_linux/foo.h').createSync(recursive: true);
   fileSystem.file('linux-x64/icudtl.dat').createSync();
-  fileSystem.file('packages/flutter_tools/lib/src/build_system/targets/linux.dart').createSync(recursive: true);
+  fileSystem.file('packages/ReplayServerTools/lib/src/build_system/targets/linux.dart').createSync(recursive: true);
 }
 
 class MockArtifacts extends Mock implements Artifacts {}
